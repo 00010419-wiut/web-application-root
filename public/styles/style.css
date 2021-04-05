@@ -1,7 +1,7 @@
 :root {
     font-size: 20px;
     font-family: 'Garamond', serif;
-    color: black;
+    color: #000080;
     background-color: #fdfff5;
 }
 
@@ -16,9 +16,11 @@
 .header {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    border-bottom: 1px solid #fdfff5;
 }
 
 .nav a {
@@ -35,52 +37,73 @@ a:hover {
     color: #0269A4;
 }
 
-
-
-/* Examples of images  */
-
+/* Homepage */ 
+.container,
 .example {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main {
+    padding: 90px 0 50px 0;
+    font-size: 2.5rem;
+    max-width: 50%;
+}
+
+.upload {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #000080;
+    color: ivory;
 
 }
 
-.grid1,
-.grid2,
-.grid3,
-.grid4 {
+
+/* Examples of images  */
+.img1,
+.img2,
+.img3,
+.img4 {
     width: 450px;
     height: 450px;
     background-size:cover;
     background-position:center;
 }
 
-.grid1 {
+.wrapper {
+    display: flex;
+}
+
+.img1 {
     background-image: url(https://d3i6fh83elv35t.cloudfront.net/static/2021/01/GettyImages-1294949346-1200x800.jpg);
 }
 
-.grid2 {
+.img2 {
     background-image: url(https://media.vanityfair.com/photos/60089789b8542426d4f095df/master/w_2560%2Cc_limit/BernieSanders-2021-GettyImages-1230690429.jpg);
 }
 
-.grid3 {
+.img3 {
     background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/223F/production/_117376780_harry.jpg);
 }
 
-.grid4 {
+.img4 {
     background-image: url(https://www.vesselfinder.com/images/media/20210324/16560-c23bc78e3c11cfb056d8bf9323633735.jpg);
 }
 
-.overlay1 {
-   position: absolute;
-   transition: .5s ease;
-   opacity: 0;
-   font-size: 1.1rem;
-   background-color: #008CBA;
-   position: absolute;
-   transform: translate(-50%, -50%);
-   -ms-transform: translate(-50%, -50%);
-   text-align: center;
+
+/* Footer */
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    flex-shrink: 0;
 }
 
-.example:hover .overlay1 {
-    opacity: 1;
+.back {
+
+}
+
+.copyright {
+    float: right;
 }
