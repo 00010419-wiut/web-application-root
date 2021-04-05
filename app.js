@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+/*  function to show the upload page*/ 
+app.get('/upload', (req, res) =>{
+    res.render('upload')
+})
+
+
 /* Catching error if the any errors occur in the scripts */
 app.listen(PORT, (err) =>{
     if (err) throw err

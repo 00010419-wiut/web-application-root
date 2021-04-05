@@ -1,0 +1,16 @@
+extends layout.pug 
+
+block content 
+    div.container 
+        h1 Upload Image! 
+
+        form.form(action='/upload' method='POST')
+            label Title Name 
+            input.input(type="text" name='title')
+
+            label Description 
+            textarea.input(type='text' name='desc')
+
+            button.add Choose File
+
+            button.upload Upload Image

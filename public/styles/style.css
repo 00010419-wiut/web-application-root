@@ -33,8 +33,9 @@ a {
     color: inherit;
 }
 
+/* change the color!!!! */
 a:hover {
-    color: #0269A4;
+    color: magenta;
 }
 
 /* Homepage */ 
@@ -51,7 +52,7 @@ a:hover {
     max-width: 50%;
 }
 
-.upload {
+.btn {
     display: inline-block;
     padding: 10px 15px;
     background: #000080;
@@ -69,10 +70,15 @@ a:hover {
     height: 450px;
     background-size:cover;
     background-position:center;
+    margin: 5px;
+    box-shadow: 5px 5px 10px #000080;
 }
 
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;
 }
 
 .img1 {
@@ -91,6 +97,32 @@ a:hover {
     background-image: url(https://www.vesselfinder.com/images/media/20210324/16560-c23bc78e3c11cfb056d8bf9323633735.jpg);
 }
 
+/* Upload form  */
+.form {
+    max-width: 50%;
+}
+
+.input{
+    display: block;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border: 1px solid #ccc; 
+}
+
+.add {
+
+}
+
+.upload {
+    display: inline-block;
+    background: #000080;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    padding: 10px 15px;
+}
+
 
 /* Footer */
 .footer {
@@ -105,5 +137,5 @@ a:hover {
 }
 
 .copyright {
-    float: right;
+    
 }
