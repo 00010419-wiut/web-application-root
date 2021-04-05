@@ -111,7 +111,11 @@ a:hover {
 }
 
 .add {
-
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    background-color: red;
+    font-size: 50px;
 }
 
 .upload {
@@ -123,6 +127,20 @@ a:hover {
     padding: 10px 15px;
 }
 
+
+
+/* About page */ 
+.about {
+    max-width: 1000px;
+    padding: 10px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    border: 3px solid red;
+}
 
 /* Footer */
 .footer {

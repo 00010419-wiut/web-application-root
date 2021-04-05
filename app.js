@@ -12,11 +12,15 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-/*  function to show the upload page*/ 
-app.get('/upload', (req, res) =>{
+/* A function to show the upload page*/ 
+app.get('/upload', (req, res) => {
     res.render('upload')
 })
 
+/* A function to show the about page */
+app.get('/about', (req, res) => {
+    res.render('about')
+})
 
 /* Catching error if the any errors occur in the scripts */
 app.listen(PORT, (err) =>{
