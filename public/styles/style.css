@@ -1,1 +1,86 @@
+:root {
+    font-size: 20px;
+    font-family: 'Garamond', serif;
+    color: black;
+    background-color: #fdfff5;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+
+.header {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 3px 8px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #0269A4;
+}
+
+
+
+/* Examples of images  */
+
+.example {
+
+}
+
+.grid1,
+.grid2,
+.grid3,
+.grid4 {
+    width: 450px;
+    height: 450px;
+    background-size:cover;
+    background-position:center;
+}
+
+.grid1 {
+    background-image: url(https://d3i6fh83elv35t.cloudfront.net/static/2021/01/GettyImages-1294949346-1200x800.jpg);
+}
+
+.grid2 {
+    background-image: url(https://media.vanityfair.com/photos/60089789b8542426d4f095df/master/w_2560%2Cc_limit/BernieSanders-2021-GettyImages-1230690429.jpg);
+}
+
+.grid3 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/223F/production/_117376780_harry.jpg);
+}
+
+.grid4 {
+    background-image: url(https://www.vesselfinder.com/images/media/20210324/16560-c23bc78e3c11cfb056d8bf9323633735.jpg);
+}
+
+.overlay1 {
+   position: absolute;
+   transition: .5s ease;
+   opacity: 0;
+   font-size: 1.1rem;
+   background-color: #008CBA;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.example:hover .overlay1 {
+    opacity: 1;
+}
