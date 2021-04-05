@@ -4,10 +4,12 @@ const PORT = 8000
 
 /* Defining PUG as view engine */ 
 app.set('view engine', 'pug')
+/* Static server */
+app.use('/static', express.static('public'))
 
 /* Localhost on PORT that we define by the constant */
 app.get('/', (req, res) => {
-    res.render('homepage')
+    res.render('index')
 })
 
 /* Catching error if the any errors occur in the scripts */

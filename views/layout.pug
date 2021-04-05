@@ -1,1 +1,19 @@
-/* This layout will be a template to any others layout pages */ 
+doctype html
+html(lang='en')
+    head 
+        title.title Image Gallery Application
+        link(rel='stylesheet', href='/static/styles/style.css')
+    body 
+        header.header
+            div.wrapper
+                h1.logo 
+                    a(href='/') Image Gallery 
+            nav.nav
+                a(href='/about') About
+                a(href='/gallery') All Images
+                a(href='/archive') Archive
+                a(href='/login') Log In
+                a(href='/signin') Sign In
+
+        block content 
+        include footer.pug 
