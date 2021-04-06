@@ -127,6 +127,22 @@ a:hover {
     padding: 10px 15px;
 }
 
+.error {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid red;
+    font-size: 1.3rem;
+    color: red;
+}
+
+.success {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid green;
+    font-size: 1.3rem;
+    color: green;
+}
+
 /* Gallery */
 .image-wrapper {
     max-width: 50%;

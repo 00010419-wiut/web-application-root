@@ -4,13 +4,21 @@ block content
     div.container 
         h1 Upload Image! 
 
+        if error 
+            p.error Error! Cannot be empty!
+
+        if success 
+            p.success Image uploaded!
+
         form.form(action='/upload' method='POST')
-            label Title Name 
-            input.input(type="text" name='title')
+            label Title
+            input.input(type='text' name='title')
 
             label Description 
             textarea.input(type='text' name='desc')
-
-            button.add Choose File
+            
+            label(for='files') 
+            input.btnfile(type='file' name='files')
+            input.add(type="button") 
 
             button.upload Upload Image
