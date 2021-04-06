@@ -40,7 +40,7 @@ app.post('/upload', (req, res) => {
                 description: desc
             })
 
-            fs.writeFile('./data/images.json', JSON.stringify(images), err =>{
+            fs.writeFile('./data/images.json', JSON.stringify(images), err => {
                 if (err) throw err
 
                 res.render('upload', { success: true })
@@ -62,10 +62,10 @@ app.get('/:id/delete', (req, res) => {
 
         const filteredImages = images.filter(image => image.id != id)
 
-        fs.writeFile('./data/images.json', JSON.stringify(filteredImages), (err) => {
+        fs.writeFile('./data/images.json', JSON.stringify(filteredImages), err => {
             if (err) throw err  
             
-            res.render('gallery', { images: filteredImages, delete: true})
+            res.render('gallery', { images: filteredImages, deleted: true})
         })
     })
 })

@@ -4,6 +4,9 @@ block content
     div.container 
         h1 Gallery
 
+        if deleted 
+            p.success Image deleted!
+
         each image in images 
             div.image-wraper
                 a.image(href=`/gallery/${ images.id }`)  #{ image.title }

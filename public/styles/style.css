@@ -120,19 +120,21 @@ a:hover {
     font-size: 50px;
 }
 
-.error {
+.error,
+.success,
+.deleted {
     display: inline-block;
     padding: 10px;
-    border: 1px solid red;
     font-size: 1.3rem;
+}   
+
+.error {
+    border: 1px solid red;
     color: red;
 }
 
 .success {
-    display: inline-block;
-    padding: 10px;
     border: 1px solid green;
-    font-size: 1.3rem;
     color: green;
 }
 
