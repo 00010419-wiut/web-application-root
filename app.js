@@ -51,6 +51,25 @@ app.post('/upload', (req, res) => {
     res.render('upload')
 })
 
+/* delete  */
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/images.json', (err, data) => {
+        if (err) throw err
+
+        const images = JSON.parse(data)
+
+        const filteredImages = images.filter(image => image.id != id)
+
+        fs.writeFile('./data/images.json', JSON.stringify(filteredImages), (err) => {
+            if (err) throw err  
+            
+            res.render('gallery', { images: filteredImages, delete: true})
+        })
+    })
+})
+
 /* A function to show the about page */
 app.get('/about', (req, res) => {
     res.render('about')

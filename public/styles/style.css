@@ -2,7 +2,7 @@
     font-size: 20px;
     font-family: 'Garamond', serif;
     color: #000080;
-    background-color: #fdfff5;
+    background-color: #DDDDDD;
 }
 
 * {
@@ -45,9 +45,8 @@ a {
     color: inherit;
 }
 
-/* change the color!!!! */
 a:hover {
-    color: #a31616;
+    color: #880808;
 }
 
 /* Homepage */ 
@@ -74,7 +73,7 @@ a:hover {
     background-size:cover;
     background-position:center;
     margin: 5px;
-    box-shadow: 5px 5px 10px #000080;
+    box-shadow: 5px 5px 10px #add8e6;
 }
 
 .wrapper {

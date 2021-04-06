@@ -7,7 +7,7 @@ block content
         each image in images 
             div.image-wraper
                 a.image(href=`/gallery/${ images.id }`)  #{ image.title }
-                a.delete(href='#') delete
+                a.delete(href=`/${ image.id }/delete`) delete
                 a.edit(href='#') edit
 
 
