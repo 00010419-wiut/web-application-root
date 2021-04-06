@@ -1,0 +1,13 @@
+extends layout.pug 
+
+block content 
+    div.container 
+        h1 Gallery
+
+        each image in images 
+            div.image-wraper
+                a.image(href='#')= image 
+                a.delete(href='#') delete
+                a.edit(href='#') edit
+
+
