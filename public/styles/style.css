@@ -10,9 +10,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Buttons */
+.btn,
+.delete, 
+.edit,
+.upload {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+    background: #add8e6;
+    border-color: #add8e6;
+} 
 
 /* Navigation */
-
 .header {
     max-width: 1000px;
     margin: 0 auto;
@@ -35,7 +47,7 @@ a {
 
 /* change the color!!!! */
 a:hover {
-    color: magenta;
+    color: #a31616;
 }
 
 /* Homepage */ 
@@ -51,15 +63,6 @@ a:hover {
     font-size: 2.5rem;
     max-width: 50%;
 }
-
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #000080;
-    color: ivory;
-
-}
-
 
 /* Examples of images  */
 .img1,
@@ -118,15 +121,6 @@ a:hover {
     font-size: 50px;
 }
 
-.upload {
-    display: inline-block;
-    background: #000080;
-    color: white;
-    font-size: 1.3rem;
-    border: none;
-    padding: 10px 15px;
-}
-
 .error {
     display: inline-block;
     padding: 10px;
@@ -153,20 +147,6 @@ a:hover {
 
 .image {
     font-size: 1.3rem;
-}
-
-.delete {
-    display: inline-block;
-    padding: 5px 10px;
-    background: #000080;
-    color: ivory;
-}
-
-.edit {
-    display: inline-block;
-    padding: 5px 10px;
-    background: #000080;
-    color: ivory;
 }
 
 /* About page */ 
@@ -198,4 +178,3 @@ a:hover {
     font-family: inherit;
     font-size: 0.8rem;
 }
-
