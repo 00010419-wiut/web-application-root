@@ -168,16 +168,18 @@ a:hover {
 
 /* Footer */
 .footer {
-    max-width: 1000px;
-    margin: 0 auto;
+    position: fixed;
+    width: 1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
     padding: 10px;
-    flex-shrink: 0;
 }
 
-.back {
-
-}
-
+.back,
 .copyright {
-    
+    text-align: center;
+    font-family: inherit;
+    font-size: 0.8rem;
 }
+
