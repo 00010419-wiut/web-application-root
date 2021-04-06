@@ -43,7 +43,7 @@ app.post('/upload', (req, res) => {
             fs.writeFile('./data/images.json', JSON.stringify(images), err =>{
                 if (err) throw err
 
-                res.render('create', { success: true })
+                res.render('upload', { success: true })
             })
         })
     }
@@ -56,11 +56,15 @@ app.get('/about', (req, res) => {
     res.render('about')
 })
 
-/* for first steps to db  */
-const images = ['1', '2']
-
 app.get('/gallery', (req, res) =>{
-    res.render('gallery', { images: images })
+
+    fs.readFile('./data/images.json', (err, data) => {
+        if (err) throw err
+
+        const images = JSON.parse(data)
+
+        res.render('gallery', { images: images })
+    })
 })
 
 /* Catching error if the any errors occur in the scripts */
