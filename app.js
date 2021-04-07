@@ -16,17 +16,32 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-/* A function to show the upload page*/ 
+/* A controller to show the upload page*/ 
 app.get('/upload', (req, res) => {
     res.render('upload')
 })
 
-/* POST method  */
+/* A controller to show the detail page */
+app.get('/gallery/:id', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/images.json', (err, data) => {
+        if (err) throw err
+
+        const images = JSON.parse(data)
+
+        const image = images.filter( image => image.id == id)[0]
+
+        res.render('detail', { image: image })
+    })
+})
+
+/* POST method to upload the image with title and description */
 app.post('/upload', (req, res) => {
     const title = req.body.title
-    const desc = req.body.desc
+    const description = req.body.description
 
-    if (title.trim() === '' && desc.trim() === ''){
+    if (title.trim() === '' && description.trim() === ''){
         res.render('upload', { error: true })
     } else {
         fs.readFile('./data/images.json', (err, data) => {
@@ -37,10 +52,10 @@ app.post('/upload', (req, res) => {
             images.push({
                 id: id(),
                 title: title,
-                description: desc
+                description: description
             })
 
-            fs.writeFile('./data/images.json', JSON.stringify(images), err => {
+            fs.writeFile('./data/images.json', JSON.stringify(images), err =>{
                 if (err) throw err
 
                 res.render('upload', { success: true })
@@ -70,7 +85,7 @@ app.get('/:id/delete', (req, res) => {
     })
 })
 
-/* A function to show the about page */
+/* A controller to show the about page */
 app.get('/about', (req, res) => {
     res.render('about')
 })
@@ -93,6 +108,7 @@ app.listen(PORT, (err) =>{
     console.log(`App is running on port ${ PORT }`)
 })
 
+/* function to generated a random id */ 
 function id () {
     return '_' + Math.random().toString(36).substr(2, 9);
   };

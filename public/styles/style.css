@@ -12,8 +12,7 @@
 }
 /* Buttons */
 .btn,
-.delete, 
-.edit,
+.delete,
 .upload {
     display: inline-block;
     text-transform: uppercase;
@@ -110,14 +109,6 @@ a:hover {
     font-size: 1.3rem;
     font-family: inherit;
     border: 1px solid #ccc; 
-}
-
-.add {
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    background-color: red;
-    font-size: 50px;
 }
 
 .error,
