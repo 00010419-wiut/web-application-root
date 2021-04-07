@@ -50,7 +50,7 @@ app.post('/upload', (req, res) => {
             const images = JSON.parse(data)
 
             images.push({
-                id: id(),
+                id: id (),
                 title: title,
                 description: description
             })
